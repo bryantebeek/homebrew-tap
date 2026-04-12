@@ -8,9 +8,15 @@ cask "pane" do
   homepage "https://bryantebeek.github.io/pane-releases/"
 
   depends_on macos: ">= :sequoia"
-  depends_on formula: "tmux"
 
   app "Pane.app"
+
+  preflight do
+    unless system("command -v tmux >/dev/null 2>&1")
+      ohai "tmux not found — installing via Homebrew"
+      system("brew", "install", "tmux")
+    end
+  end
 
   zap trash: [
     "~/Library/Preferences/com.bryantebeek.pane.mac.plist",
