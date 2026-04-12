@@ -8,6 +8,7 @@ cask "pane" do
   homepage "https://bryantebeek.github.io/pane-releases/"
 
   depends_on macos: ">= :sequoia"
+  depends_on formula: "tmux"
 
   app "Pane.app"
 
