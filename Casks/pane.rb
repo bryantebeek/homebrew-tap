@@ -1,6 +1,6 @@
 cask "pane" do
-  version "0.1.2"
-  sha256 "1f892214d78e6794e4725e60b99f4733e57e81603cd5406fa01ba8b9c2bb4e84"
+  version "0.2.0"
+  sha256 "10b8cdebe9a9ba1695ddb19bf50ff1db25d2357f154df058a2729ee31cc8a138"
 
   url "https://github.com/bryantebeek/pane-releases/releases/download/v#{version}/Pane-#{version}.dmg"
   name "Pane"
